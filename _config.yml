@@ -9,3 +9,6 @@ permalink: /:year/:month/:day/:title
 
 # Build settings
 markdown: kramdown
+
+# Google Analytics
+google_analytics: G-F6TWSVCF5B
