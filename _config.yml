@@ -1,0 +1,11 @@
+title: 지쿵 블로그
+email: zkoong21@gmail.com
+description: >
+  개인 블로그 입니다.
+baseurl: ""
+url: "http://jihunlee.github.io"
+github_username: jihunleekr
+permalink: /:year/:month/:day/:title
+
+# Build settings
+markdown: kramdown
