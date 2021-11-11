@@ -31,13 +31,18 @@ A 에서 B 로 변할 때는 경우의 수가 2배가 됩니다.
 
 {% highlight python %}
 # n 번째 경우의 수 (A,B,C,D=0,1,2,3)
-C[n][0] = C[n-1][1] + C[n-1][3]
-C[n][1] = C[n-1][0] * 2 + C[n-1][2]
-C[n][2] = C[n-1][1]
-C[n][3] = C[n-1][0]
+C[n][A] = C[n-1][B] + C[n-1][D]
+C[n][B] = C[n-1][A] * 2 + C[n-1][C]
+C[n][C] = C[n-1][B]
+C[n][D] = C[n-1][A]
 {% endhighlight %}
 
-홀수 과정을 제거하면 코드가 더욱 간단해집니다.
+좀 더 간단한 코드로 표현할 수 있습니다.
+{% highlight python %}
+a, b, c, d = b + d, a * 2 + c, b, a
+{% endhighlight %}
+
+홀수 과정을 제거하면 더욱 간단해집니다.
 {% highlight python %}
 a, c = a * 3 + c, a * 2 + c
 {% endhighlight %}
